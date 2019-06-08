@@ -1,0 +1,234 @@
+﻿
+@{
+    ViewBag.Title = "JSBasics";
+}
+
+<style>
+    button.wideButton {
+        width: 100%;
+        height: 50px;
+    }
+
+    button.modalButton{
+        width: 20%;
+        background-color: cadetblue;
+        color: black;
+        font-size:larger;
+    }
+
+    hr {
+        border: 5px solid black;
+        background-color: darkorange;
+        height: 8px;
+    }
+</style>
+
+
+
+<h2>JS Basics</h2>
+
+@*This Action will eventually have to be moved in one way or the other
+    into our template once the template has been worked in*@
+
+<div class="row text-center h3">
+    Demo view for triggering various Modals
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <button class="btn btn-info wideButton" data-toggle="modal" data-target="#mathModal">Math</button>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-warning wideButton" data-toggle="modal" data-target="#factorialModal">Factorial</button>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-primary wideButton" data-toggle="modal" data-target="#fizzbuzzModal">Fizz-Buzz</button>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-success wideButton" data-toggle="modal" data-target="#palindromeModal">Palindrome</button>
+    </div>
+</div>
+
+<hr/>
+
+<div class="row">
+    <div class="col-md-offset-4 col-md-4">
+        <button class="btn btn-lg btn-danger wideButton" data-toggle="modal" data-target="#allModal">All Exercises</button>
+    </div>   
+</div>
+
+@*Modals go here*@
+
+<div id="mathModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>MATH MODAL</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modalButton" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="factorialModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>FACTORIAL MODAL</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modalButton" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="fizzbuzzModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>FIZZ-BUZZ MODAL</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modalButton" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="palindromeModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>PALINDROME MODAL</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modalButton" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="allModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-pills">
+                    <li class="active"><a data-toggle="pill" href="#math">Math</a></li>
+                    <li><a data-toggle="pill" href="#factorial">Factorial</a></li>
+                    <li><a data-toggle="pill" href="#fizzbuzz">Fizz-Buzz</a></li>
+                    <li><a data-toggle="pill" href="#palindrome">Palindrome</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="math" class="tab-pane fade in active">
+                        <h3>HOME</h3>
+                        <p>Some content.</p>
+                    </div>
+                    <div id="factorial" class="tab-pane fade">
+                        <div class="container-fluid">
+                            <div class="row text-center h3">
+                                Welcome to the Faxctorial exercise
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-6">Enter number:</div>
+                                        <div class="col-md-6">
+                                            <input type="number" id="factNum" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <button class="btn btn-primary" id="btnFact">Calculate</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-12 text-center h4">RESULT</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 text-center h4">
+                                            <p id="factResult"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div id="fizzbuzz" class="tab-pane fade">
+                        <h3>Menu 2</h3>
+                        <p>Some content in menu 2.</p>
+                    </div>
+                    <div id="palindrome" class="tab-pane fade">
+                        <h3>Menu 2</h3>
+                        <p>Some content in menu 2.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modalButton" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $("#btnFact").click(function () {
+            //Step 1: Get the data
+            var number1 = Number($("#factNum").val());
+
+            //Step 2: Do my calculation
+            var result = Factorial(number1);
+
+            //Step 3: Output the result
+            $("#factResult").text(result);
+
+        });
+
+        function Factorial(number) {
+            //For loop
+            for (var loop = number - 1; loop > 1; loop--) {
+                number *= loop;               
+            }
+            return number;
+        }
+    </script>
+   
+}
+
+

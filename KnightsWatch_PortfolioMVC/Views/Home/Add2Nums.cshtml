@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Add2Nums";
+}
+
+<h2>Add2Nums</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <span>Enter num1: </span> <input id="num1" type="number" />
+    </div>
+    <div class="col-md-6">
+        <span>Enter num2: </span><input id="num2" type="number" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <button id="btnCalc" class="btn btn-primary">Click Me</button>
+    </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <p>You two numbers added together are: <span id="sum"></span></p>
+</div>
+
+@section scripts{
+    <script>
+        $("#btnCalc").click(function () {
+
+            var num1 = Number($("#num1").val());
+            var num2 = +$("#num2").val();
+
+            var sum = num1 + num2;
+            $("#sum").text(sum);
+        });
+    </script>
+}
+

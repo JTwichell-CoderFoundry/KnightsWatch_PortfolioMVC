@@ -1,0 +1,209 @@
+﻿
+@{
+    ViewBag.Title = "GridDemo";
+}
+
+<h2>GridDemo</h2>
+
+<div class="row">
+    <div class="col-md-12 text-center h3">
+        BS Grid Demo
+    </div>
+</div>
+<div class="row text-center h3">
+    <div class="col-md-4">4</div>
+    <div class="col-md-4">4</div>
+    <div class="col-md-4">4</div>
+</div>
+<div class="row text-center h3">
+    <div class="col-md-12">12</div>
+</div>
+<div class="row text-center h3">
+    <div class="col-md-1">1</div>
+    <div class="col-md-1">1</div>
+    <div class="col-md-1">1</div>
+    <div class="col-md-1">1</div>
+    <div class="col-md-1">1</div>
+    <div class="col-md-1">1</div>
+    <div class="col-md-1">1</div>
+    <div class="col-md-1">1</div>
+    <div class="col-md-1">1</div>
+    <div class="col-md-1">1</div>
+    <div class="col-md-1">1</div>
+    <div class="col-md-1">1</div>
+</div>
+<div class="row text-center h3">
+    @for (var loop = 65; loop <= 76; loop++)
+    {
+        <div class="col-md-1 table-bordered">@loop</div>
+
+    }
+</div>
+<div class="row text-center h3 text-danger">
+    @for (var loop = 65; loop < 77; loop++)
+    {
+        <div class="col-md-1 table-bordered">@Convert.ToChar(loop)</div>
+
+    }
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-12 text-center h3">
+        BS Row Based Grid
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">1</div>
+    <div class="col-md-9">2</div>
+</div>
+<div class="row">
+    <div class="col-md-12 h2">H2</div>
+</div>
+<div class="row">
+    <div class="col-md-2">3</div>
+    <div class="col-md-2">4</div>
+    <div class="col-md-2">5</div>
+    <div class="col-md-2">6</div>
+    <div class="col-md-2">7</div>
+    <div class="col-md-2">8</div>
+</div>
+<div class="row">
+    <div class="col-md-12 h3">H3</div>
+</div>
+<div class="row">
+    <div class="col-md-1">9</div>
+    <div class="col-md-1">10</div>
+    <div class="col-md-1">11</div>
+    <div class="col-md-1">12</div>
+    <div class="col-md-1">13</div>
+    <div class="col-md-1">14</div>
+    <div class="col-md-1">15</div>
+    <div class="col-md-1">16</div>
+    <div class="col-md-1">17</div>
+    <div class="col-md-1">18</div>
+    <div class="col-md-1">19</div>
+    <div class="col-md-1">20</div>
+</div>
+<div class="row h4">
+    <div class="col-md-3">H4</div>
+    <div class="col-md-3">H4</div>
+    <div class="col-md-6">H4</div>
+</div>
+<div class="row">
+    <div class="col-md-3">21</div>
+    <div class="col-md-3">22</div>
+    <div class="col-md-6">23</div>
+</div>
+
+<hr />
+
+
+
+<style>
+    /* Use CSS Selectors in order to apply CSS rules to HTML elements*/
+    /* . = class */
+    /* # = id */
+
+    .leftColRows {
+        height: 25px;
+    }
+
+    .middleColRows {
+        height: 50px;
+        padding: 12.5px;
+    }
+
+    .rightColRows {
+        height: 33.3px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-12 text-center h3">
+        BS Column Based Grid
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-6 table-bordered leftColRows">C1R1C1</div>
+            <div class="col-md-6 table-bordered leftColRows">C1R1C2</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 table-bordered leftColRows">C1R2C1</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 table-bordered leftColRows">C1R3C1</div>
+            <div class="col-md-6 table-bordered leftColRows">C1R3C2</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 table-bordered leftColRows">C1R4C1</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-12 table-bordered middleColRows">C2R1C1</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 table-bordered middleColRows">C2R2C1</div>
+        </div>
+    </div>
+    <div class="col-md-4 ">
+        <div class="row">
+            <div class="col-md-12 table-bordered rightColRows">C3R1C1</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 table-bordered rightColRows">C3R2C1</div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 table-bordered rightColRows">C3R3C1</div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="container-fluid">
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-6 table-bordered leftColRows">C1R1C1</div>
+            <div class="col-md-6 table-bordered leftColRows">C1R1C2</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 table-bordered leftColRows">C1R2C1</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 table-bordered leftColRows">C1R3C1</div>
+            <div class="col-md-6 table-bordered leftColRows">C1R3C2</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 table-bordered leftColRows">C1R4C1</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-12 table-bordered middleColRows">C2R1C1</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 table-bordered middleColRows">C2R2C1</div>
+        </div>
+    </div>
+    <div class="col-md-4 ">
+        <div class="row">
+            <div class="col-md-12 table-bordered rightColRows">C3R1C1</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 table-bordered rightColRows">C3R2C1</div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 table-bordered rightColRows">C3R3C1</div>
+        </div>
+    </div>
+</div>
+
+
+
+
